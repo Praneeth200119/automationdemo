@@ -21,11 +21,8 @@ stages:
       inputs:
         script: |
             npm install -g @angular/cli
-            npm audit fix --force
             npm install
-            npm install --force
-            npm audit fix
-            ng build --configuration=production
+            ng build 
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
